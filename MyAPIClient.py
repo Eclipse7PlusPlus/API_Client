@@ -3,7 +3,7 @@ import json
 import sys
 sys.stdout.reconfigure(encoding="utf-8")
 
-class MyClient:
+class MyAPIClient:
     def __init__(self,api_key):
         #Конструктор моего АПИ клиента, тут формируется сам клиент, его ключ, и адрес, по которому будем отправлять запрос
         self.api_key = api_key
@@ -54,12 +54,12 @@ if __name__ == "__main__":
 
     API_KEY = os.getenv("GEMINI_API_KEY", "AQ.Ab8RN6LtPelJloAubZncYsApsTLshwIv5FV02qpOnJEYbW0XJQ")
 
-    client = MyClient(
+    client = MyAPIClient(
         api_key=API_KEY,
     )
 
     answer = client.send_message("Привет! Кто проживает на дне океана?")
     print("Александр:", answer)
     
-        
+# Все предложения рассматриваются здесь)
         
